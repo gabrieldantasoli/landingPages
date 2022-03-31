@@ -1,7 +1,6 @@
-var bars = document.querySelector('#bars') ;
-bars.addEventListener('click',change)
-document.querySelector('#close').addEventListener('click',change) ;
-
-function change(){
-    document.querySelector('.clock').classList.toggle('active')
+function toggle(){
+    const toggle = document.querySelector(".toggle") ;
+    const banner = document.querySelector(".banner") ;
+    banner.classList.toggle('active') ;
+    toggle.classList.toggle('active') ;
 } ;
