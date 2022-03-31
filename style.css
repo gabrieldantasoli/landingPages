@@ -142,7 +142,7 @@ section{
     background: linear-gradient(180deg,rgb(40, 40, 40),rgb(11, 11, 11));
 }
 .clock header{
-    position: fixed;
+    position: relative;
     top: 0;left: 0;
     width: 100%;
     padding: 30px 100px;
