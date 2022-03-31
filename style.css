@@ -232,7 +232,7 @@ section{
 }
 
 @media (max-width:500px){
-    header{
+    body > header{
         flex-direction: column;
     }
 }
