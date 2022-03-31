@@ -135,6 +135,89 @@ section{
     background-color: white;
     color: black;
 }
+.clock{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg,rgb(40, 40, 40),rgb(11, 11, 11));
+}
+.clock header{
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: poppins,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.clock #bars,.clock #close{
+    width: 40px;
+    filter: invert(1);
+    z-index: 10;
+}
+#close{
+    position: absolute;
+    top: 30px;right: 100px;
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    top: 100px;left: 50px;
+    width: 320px;
+    height: 200px;
+    background-color: rgb(253, 61, 61);
+    transition: 0.7s;
+}
+.clock.active::before{
+    top: 0;left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #000;
+    z-index: 3;
+}
+.clock.active::after{
+    bottom: 0;right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #000;
+    z-index: 3;
+}
+.clock::after{
+    content: '';
+    position: absolute;
+    bottom: 70px;right: 60px;
+    width: 250px;
+    height: 175px;
+    background-color: rgb(55, 0, 255);
+    transition: 0.7s;
+}
+.banner{
+    position: absolute;
+    top: 0;left: 0;
+    bottom: 0;right: 0;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 4;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
+.clock.active .banner{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 1s;
+}
+.banner a{
+    font-size: 1.8rem;
+    margin: 0.7rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
 
 @keyframes animate{
     0%{
